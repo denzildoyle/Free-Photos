@@ -12,7 +12,7 @@ class Application_model extends CI_Model{
 	public function getPhoto($id){
         $data = array( 'id' => $id);
         $this->db->where( $data );
-        $query = $this->db->get('user');
-        return $query->result_array();
+        $query = $this->db->get('photos');
+        return $query->row(0);
     }
 } //end application_model
