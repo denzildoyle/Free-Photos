@@ -2,6 +2,8 @@
 
 class Download extends CI_Controller {
 	public function index(){
-		echo $this->input->get('img');
+		$img_id = $this->input->get('img');
+		$data['photos'] = $this->application_model->getPhoto($img_id);
+		$this->load->view('download_view', $data);
 	}
 }
