@@ -8,4 +8,11 @@ class Application_model extends CI_Model{
 	    $query = $this->db->get('photos');
 	    return $query->result_array();
 	}
+
+	public function getPhoto($id){
+        $data = array( 'id' => $id);
+        $this->db->where( $data );
+        $query = $this->db->get('user');
+        return $query->result_array();
+    }
 } //end application_model
