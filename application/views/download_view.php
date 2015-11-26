@@ -38,6 +38,7 @@
 	  	 	<footer>
 	  	 		<a class="download" href="<?= base_url() . "public/img/" . $photo->path . ".jpg"; ?>" download>Download</a>
 	  	 		<ul class="social-icons">
+		  	 		<li><a class="demo-icon icon-link"></a></li>
 		  	 		<li><a class="demo-icon icon-twitter"></a></li>
 		  	 		<li><a class="demo-icon icon-facebook-1"></a></li>
 		  	 	</ul>
