@@ -15,6 +15,15 @@
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 		<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/style.css">
+		<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/animation.css">
+		<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/fontello-codes.css">
+		<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/fontello-embedded.css">
+		<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/fontello.css">
+
+		<!--[if lte IE 7]>
+			<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/fontello-ie7-codes.css">
+			<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/fontello-ie7.css">
+		<![endif]-->
 	</head>
 	<body class="bg"
 		style="
@@ -28,6 +37,10 @@
   	 	<div class="overlay">
   	 	<footer>
   	 		<a class="download" href="<?= base_url() . "public/img/" . $photo->path . ".jpg"; ?>" download>Download</a>
+	 	    <i class="demo-icon icon-upload-cloud-1"></i>
+    		<i class="demo-icon icon-twitter"></i>
+    		<i class="demo-icon icon-facebook-1"></i>
+        	<!-- <i class="demo-icon icon-spin5 animate-spin"></i> -->
   	 	</footer>
   	 	</div>
 
