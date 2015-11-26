@@ -5,6 +5,7 @@
 				<h2 class="text-center">Free Food Photography</h2>
 				<h6 class="text-center">MADE BY <a href="www.freshlysqzd.com">FRESHLY SQUEEZED DESIGNS</a></h6>
 				<p class="text-center"><b>Free (<a href="<?= base_url() . "public/" ?>license" class="gray"> do whatever you want </a>) high-resolution food photos.</b> I take a lot of food photos and never really do anything with them, so here you go.</p>
+				<center><a href="#" class="btn btn-primary btn-upload" role="button">Upload Photo <i class="icon icon-upload-cloud-1"></i></a></center>
 			</div>
 		</div>
 		<div class="container">
