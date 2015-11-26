@@ -5,6 +5,7 @@ class Application_model extends CI_Model{
     public function __construct(){
     }
 	public function getPhotos(){
+        $this->db->where(array('approved' => '1'));
 	    $query = $this->db->get('photos');
 	    return $query->result_array();
 	}
