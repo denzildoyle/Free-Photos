@@ -10,9 +10,14 @@
 
 				<?= $error;?>
 				<?= form_open_multipart('submit/do_upload');?>
-					<center><input type="file" name="userPhoto" size="20" /></center>
-					<center><input type="submit" value="Add a Photo" class="btn btn-primary" role="button"></center>
-
+					<div class="form-group">
+						<input type="text" name="name" class="form-control" placeholder="Name">
+					</div>
+					<div class="form-group">
+						<textarea name="description" class="form-control" placeholder="Photo Description"></textarea>
+					</div>
+					<input type="file" name="userPhoto" size="20" />
+					<center><input type="submit" value="Submit" class="btn btn-primary" role="button"></center>
 				</form>
 			</div>
 		</div>

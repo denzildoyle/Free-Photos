@@ -107,6 +107,7 @@ footer .download:hover{
   color: #666;
 }
 
+/*override*/
 .btn-primary{
   background-color: #222;
   border: 1px solid #111;
