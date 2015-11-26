@@ -35,13 +35,15 @@
 		">
 
   	 	<div class="overlay">
-  	 	<footer>
-  	 		<a class="download" href="<?= base_url() . "public/img/" . $photo->path . ".jpg"; ?>" download>Download</a>
-	 	    <i class="demo-icon icon-upload-cloud-1"></i>
-    		<i class="demo-icon icon-twitter"></i>
-    		<i class="demo-icon icon-facebook-1"></i>
-        	<!-- <i class="demo-icon icon-spin5 animate-spin"></i> -->
-  	 	</footer>
+	  	 	<footer>
+	  	 		<a class="download" href="<?= base_url() . "public/img/" . $photo->path . ".jpg"; ?>" download>Download</a>
+	  	 		<ul class="social-icons">
+		  	 		<li><a class="demo-icon icon-twitter"></a></li>
+		  	 		<li><a class="demo-icon icon-facebook-1"></a></li>
+		  	 	</ul>
+	        	<!-- <i class="demo-icon icon-spin5 animate-spin"></i> -->
+		  	 	<!-- <li><a class="demo-icon icon-upload-cloud-1"></a></li> -->
+	  	 	</footer>
   	 	</div>
 
 
