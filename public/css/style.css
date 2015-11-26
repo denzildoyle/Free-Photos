@@ -66,6 +66,7 @@ footer{
   position: fixed;
   bottom: 0px;
   width: 100%;
+  padding: 40px
 }
 
 footer .download{
@@ -73,11 +74,26 @@ footer .download{
   border: 2px solid #fff;
   border-radius: 20px;
   padding: 5px 20px;
-  margin: 40px;
   color: #fff;
 }
 
 footer .download:hover{
   color: #fff;
   text-decoration: none;
+}
+
+.social-icons{
+  float: right;
+  padding: 5px;
+  font-size: 20px;
+  margin:0;
+}
+
+.social-icons li{
+  list-style: none;
+  float: left;
+}
+
+.social-icons li a{
+  color: #fff;
 }
