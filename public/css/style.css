@@ -92,8 +92,10 @@ footer .download:hover{
 .social-icons li{
   list-style: none;
   float: left;
+  margin-right: 10px;
 }
 
 .social-icons li a{
   color: #fff;
+  text-decoration: none;
 }
