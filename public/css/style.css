@@ -82,20 +82,20 @@ footer .download:hover{
   text-decoration: none;
 }
 
-.social-icons{
+.share-icons{
   float: right;
   padding: 5px;
   font-size: 20px;
   margin:0;
 }
 
-.social-icons li{
+.share-icons li{
   list-style: none;
   float: left;
   margin-right: 10px;
 }
 
-.social-icons li a{
+.share-icons li a{
   color: #fff;
   text-decoration: none;
 }
