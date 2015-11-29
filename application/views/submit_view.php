@@ -29,10 +29,11 @@
 					<?php if(form_error('photo') != '') echo "<div class=\"form-group error\">"; else echo "<div class=\"form-group\">"; ?>
 						<span class="help-inline"><?= form_error('photo'); ?></span>
 						<input type="file" name="photo" value="<?= set_value('photo'); ?>" size="20" />
+						<span><small>.jpg images only</small></span>
 					</div>
 
 
-					<p class="text-right"><small>Please enter information in all fields.</small></p>
+					<!-- <p class="text-right"><small>Please enter information in all fields.</small></p> -->
 
 					<center><input type="submit" value="Submit" class="btn btn-primary" role="button"></center>
 				</form>
