@@ -2,7 +2,7 @@
 
 class Submit extends CI_Controller {
 	public function index(){
-		$this->load->view('submit_view', array('error' => ' ' ));
+		$this->load->view('submit_view');
 	}
 
 	function do_upload(){
@@ -41,7 +41,8 @@ class Submit extends CI_Controller {
 
 				$this->application_model->addPhoto($photo);
 				$this->session->set_flashdata('success-message', 'photo added.');
-				$redirect('submit');
+
+				redirect('submit');
 			} else{
 				$this->session->set_flashdata('error-message', $this->upload->display_errors());
 				$this->index();
