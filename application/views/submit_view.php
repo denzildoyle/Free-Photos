@@ -26,17 +26,13 @@
 						<textarea name="description" class="form-control" placeholder="photo description"><?= set_value('description'); ?></textarea>
 					</div>
 
-					<?php if(form_error('photo') != '') echo "<div class=\"form-group error\">"; else echo "<div class=\"form-group\">"; ?>
-						<span class="help-inline"><?= form_error('photo'); ?></span>
-						<?php if ($this->session->flashdata('error-message')) : ?>
-							<div class="alert alert-success">
-								<span class="help-inline"><?= form_error('error-message'); ?></span>
-							</div>
-						<?php endif; ?>
-						<input type="file" name="photo" value="<?= set_value('photo'); ?>" size="20" />
-						<span><small>.jpg images only</small></span>
-					</div>
-
+					<?php if ($this->session->flashdata('error-message')) : ?>
+						<div class="alert alert-success">
+							<span class="help-inline"><?= form_error('error-message'); ?></span>
+						</div>
+					<?php endif; ?>
+					<input type="file" name="photo" size="20" />
+					<span><small>.jpg images only</small></span>
 
 					<!-- <p class="text-right"><small>Please enter information in all fields.</small></p> -->
 
