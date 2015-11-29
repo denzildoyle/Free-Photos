@@ -18,7 +18,7 @@ class Application_model extends CI_Model{
         return $query->row(0);
     }
 
-    public function setUser($photo){
+    public function addPhoto($photo){
         $this->db->insert('photos', $photo);
         return $photo;
     }
