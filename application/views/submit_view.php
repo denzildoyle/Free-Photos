@@ -8,9 +8,9 @@
 				<p>We'll review your photo for publishing and if <a class="link" href="">your submission is accepted</a>, your work will be distributed for free under the <a class="link" href="<?= base_url() . "license" ?>">Free Food Photography license</a>.
 				<br><small>Please only upload photos <a class="link" href="">that you own the rights to.</a></small></p>
 
-				<?php if ($this->session->flashdata('message')) : ?>
+				<?php if ($this->session->flashdata('success-message')) : ?>
 					<div class="alert alert-success">
-						<?= $this->session->flashdata('message'); ?>
+						<?= $this->session->flashdata('success-message'); ?>
 					</div>
 				<?php endif; ?>
 				<?= form_open_multipart('submit/do_upload');?>
@@ -28,6 +28,11 @@
 
 					<?php if(form_error('photo') != '') echo "<div class=\"form-group error\">"; else echo "<div class=\"form-group\">"; ?>
 						<span class="help-inline"><?= form_error('photo'); ?></span>
+						<?php if ($this->session->flashdata('error-message')) : ?>
+							<div class="alert alert-success">
+								<span class="help-inline"><?= form_error('error-message'); ?></span>
+							</div>
+						<?php endif; ?>
 						<input type="file" name="photo" value="<?= set_value('photo'); ?>" size="20" />
 						<span><small>.jpg images only</small></span>
 					</div>
