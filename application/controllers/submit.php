@@ -8,6 +8,9 @@ class Submit extends CI_Controller {
 	function do_upload(){
 		$config['upload_path'] = './public/img';
 		$config['allowed_types'] = 'jpg';
+		//prepend name of photo to file
+		$config['file_name'] = 'myfile';
+		$config['overwrite'] = false;
 
 		$this->load->library('upload', $config);
 		$this->upload->initialize($config);
@@ -18,16 +21,18 @@ class Submit extends CI_Controller {
 
 			//add data to array
 			$photo = array(
-			  'img' => $image['file_name']
+			  'name' => $this->input->post('name'),
+			  'path' => 'path/'.$image['file_name'],
+			  'description' => $this->input->post('description')
 			);
 
+			print_r($photo);
 			// $this->application_model->addPhoto($photo);
 			// $this->session->set_flashdata('msg', 'photo added.');
 			// $this->index();
 		} else{
-			// $this->session->set_flashdata('msg', $this->upload->display_errors());
-			// $this->index();
-			echo $this->upload->display_errors();
+			$this->session->set_flashdata('msg', $this->upload->display_errors());
+			$this->index();
 		}
 	}
 }
