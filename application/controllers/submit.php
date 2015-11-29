@@ -6,33 +6,48 @@ class Submit extends CI_Controller {
 	}
 
 	function do_upload(){
-		$config['upload_path'] = './public/img';
-		$config['allowed_types'] = 'jpg';
-		//prepend name of photo to file
-		$config['file_name'] = 'myfile';
-		$config['overwrite'] = false;
 
-		$this->load->library('upload', $config);
-		$this->upload->initialize($config);
+		$base = 'required|trim|xss_clean';
 
-		if ($this->upload->do_upload('userPhoto')){
-			//add uploaded files to array
-			$image = $this->upload->data();
+		//validate form input
+		$this->form_validation->set_rules('name', 'name', 'min_length[5]|'.$base)
+			 ->set_rules('description', 'description', 'min_length[10]|'.$base);
 
-			//add data to array
-			$photo = array(
-			  'name' => $this->input->post('name'),
-			  'path' => 'path/'.$image['file_name'],
-			  'description' => $this->input->post('description')
-			);
+		//set validation message|
+		$this->form_validation->set_message('required', '%s required');
+		$this->form_validation->set_message('min_length', '%s must have at least %s characters');
 
-			print_r($photo);
-			// $this->application_model->addPhoto($photo);
-			// $this->session->set_flashdata('msg', 'photo added.');
-			// $this->index();
-		} else{
-			$this->session->set_flashdata('msg', $this->upload->display_errors());
-			$this->index();
-		}
+      	if ($this->form_validation->run()){
+			$config['upload_path'] = './public/img';
+			$config['allowed_types'] = 'jpg';
+
+			//prepend name of photo to file name
+			$config['file_name'] = 'FreeFoodPhotography_'.str_replace(' ','_',$this->input->post('name'));;
+			$config['overwrite'] = false;
+
+			$this->load->library('upload', $config);
+			$this->upload->initialize($config);
+
+			if ($this->upload->do_upload('photo')){
+				//add uploaded files to array
+				$image = $this->upload->data();
+
+				//add data to array
+				$photo = array(
+				  'name' => $this->input->post('name'),
+				  'path' => $image['file_name'],
+				  'description' => $this->input->post('description')
+				);
+
+				$this->application_model->addPhoto($photo);
+				$this->session->set_flashdata('success-message', 'photo added.');
+				$redirect('submit');
+			} else{
+				$this->session->set_flashdata('error-message', $this->upload->display_errors());
+				$this->index();
+			}
+		}else{
+        	$this->index();
+      	}
 	}
 }
