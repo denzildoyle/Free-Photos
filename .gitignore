@@ -9,3 +9,4 @@ application/logs/*
 !application/logs/.htaccess
 
 */config/
+!application/view/layout/analyticstracking.php

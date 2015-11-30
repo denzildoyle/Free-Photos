@@ -25,4 +25,6 @@
 			<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/fontello-ie7-codes.css">
 			<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/fontello-ie7.css">
 		<![endif]-->
+
+		<?php include_once("analyticstracking.php") ?>
 	</head>
