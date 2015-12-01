@@ -42,7 +42,7 @@ class Submit extends CI_Controller {
 				);
 
 				$this->application_model->addPhoto($photo);
-				$this->session->set_flashdata('success-message', 'photo added.');
+				$this->session->set_flashdata('success-message', 'Photo added and waiting for approval.');
 
 				redirect('submit');
 			} else{
