@@ -24,7 +24,7 @@
 
 					<?php if(form_error('title') != '') echo "<div class=\"form-group error\">"; else echo "<div class=\"form-group\">"; ?>
 						<span class="help-inline"><?= form_error('title'); ?></span>
-						<input type="text" name="title" class="form-control" value="<?= set_value('title'); ?>" placeholder="title">
+						<input type="text" name="title" class="form-control" value="<?= set_value('title'); ?>" placeholder="photo title">
 					</div>
 
 					<?php if(form_error('description') != '') echo "<div class=\"form-group error\">"; else echo "<div class=\"form-group\">"; ?>
