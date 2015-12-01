@@ -34,6 +34,7 @@ class Submit extends CI_Controller {
 
 				//add data to array
 				$photo = array(
+				  'fullname' => $this->input->post('fullname'),
 				  'name' => $this->input->post('name'),
 				  'path' => $image['file_name'],
 				  'description' => $this->input->post('description')
