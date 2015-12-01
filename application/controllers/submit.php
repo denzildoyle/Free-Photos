@@ -10,7 +10,8 @@ class Submit extends CI_Controller {
 		$base = 'required|trim|xss_clean';
 
 		//validate form input
-		$this->form_validation->set_rules('name', 'name', 'min_length[5]|'.$base)
+		$this->form_validation->set_rules('fullname', 'fullname',$base)
+			 ->set_rules('title', 'title', 'min_length[5]|'.$base)
 			 ->set_rules('description', 'description', 'min_length[10]|'.$base);
 
 		//set validation message|
@@ -21,8 +22,8 @@ class Submit extends CI_Controller {
 			$config['upload_path'] = './public/img';
 			$config['allowed_types'] = 'jpg';
 
-			//prepend name of photo to file name
-			$config['file_name'] = 'FreeFoodPhotography_'.str_replace(' ','_',$this->input->post('name'));;
+			//prepend title of photo to file title
+			$config['file_name'] = 'FreeFoodPhotography_'.str_replace(' ','_',$this->input->post('title'));;
 			$config['overwrite'] = false;
 
 			$this->load->library('upload', $config);
@@ -35,7 +36,7 @@ class Submit extends CI_Controller {
 				//add data to array
 				$photo = array(
 				  'fullname' => $this->input->post('fullname'),
-				  'name' => $this->input->post('name'),
+				  'title' => $this->input->post('title'),
 				  'path' => $image['file_name'],
 				  'description' => $this->input->post('description')
 				);

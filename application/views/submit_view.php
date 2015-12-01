@@ -16,9 +16,15 @@
 				<?= form_open_multipart('submit/do_upload');?>
 					<div class="form-group">
 					</div>
-					<?php if(form_error('name') != '') echo "<div class=\"form-group error\">"; else echo "<div class=\"form-group\">"; ?>
-						<span class="help-inline"><?= form_error('name'); ?></span>
-						<input type="text" name="name" class="form-control" value="<?= set_value('name'); ?>" placeholder="name">
+
+					<?php if(form_error('fullname') != '') echo "<div class=\"form-group error\">"; else echo "<div class=\"form-group\">"; ?>
+						<span class="help-inline"><?= form_error('fullname'); ?></span>
+						<input type="text" name="fullname" class="form-control" value="<?= set_value('fullname'); ?>" placeholder="full name">
+					</div>
+
+					<?php if(form_error('title') != '') echo "<div class=\"form-group error\">"; else echo "<div class=\"form-group\">"; ?>
+						<span class="help-inline"><?= form_error('title'); ?></span>
+						<input type="text" name="title" class="form-control" value="<?= set_value('title'); ?>" placeholder="title">
 					</div>
 
 					<?php if(form_error('description') != '') echo "<div class=\"form-group error\">"; else echo "<div class=\"form-group\">"; ?>
