@@ -63,6 +63,10 @@ a.link{
   z-index: 1;
 }
 
+.photo-title{
+  margin-top: 15px;
+}
+
 footer{
   position: fixed;
   bottom: 0px;

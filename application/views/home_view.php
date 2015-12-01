@@ -14,6 +14,7 @@
 			   	<?php foreach ($photos as $photo):?>
 					<div class="col-lg-6 col-md-6 col-xs-12 thumb">
 						<a href="<?= base_url(). "download?img=" . $photo['id']; ?>"><img src="<?= base_url() . "public/img/preview/" . $photo['path'] . ".jpg"; ?>" alt="<?= $photo['description']; ?>"></a>
+						<p class="photo-title text-center"><b><?= $photo['title']; ?></b> by <?= $photo['fullname']; ?></p>
 					</div>
 	          	<?php endforeach;?>
 			</div>
