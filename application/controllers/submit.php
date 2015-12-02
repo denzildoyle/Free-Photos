@@ -20,7 +20,7 @@ class Submit extends CI_Controller {
 
       	if ($this->form_validation->run()){
 			$config['upload_path'] = './public/img';
-			$config['allowed_types'] = 'jpg';
+			$config['allowed_types'] = 'jpg|png';
 
 			//prepend title of photo to file title
 			$config['file_name'] = 'FreeFoodPhotography_'.str_replace(' ','_',$this->input->post('title'));;
