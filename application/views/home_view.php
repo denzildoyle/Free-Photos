@@ -14,7 +14,7 @@
 			   	<?php foreach ($photos as $photo):?>
 					<?php if($photo['id'] == 3) : ?>
 						<div class="col-lg-6 col-md-6 col-xs-12 thumb">
-							<div class="_newsletter-form">
+							<div class="_newsletter-form" id="newsletter-form">
 								<?= form_open_multipart('submit/do_upload');?>
 									<h1 class="text-center">Newsletter</h1>
 									<p  class="text-center">Free, hi-res food photos delivered directly to your inbox.</p>
@@ -29,7 +29,7 @@
 						</div>
 					<?php endif; ?>
 
-					<div class="col-lg-6 col-md-6 col-xs-12 thumb <?php if($photo['id'] == 4) : ?> photo-4 <?php endif; ?>">
+					<div class="col-lg-6 col-md-6 col-xs-12 thumb" <?php if($photo['id'] == 4) : ?> id="photo-4" <?php endif; ?> >
 						<a href="<?= base_url(). "download?img=" . $photo['id']; ?>"><img src="<?= base_url() . "public/img/preview/" . $photo['path']; ?>" alt="<?= $photo['description']; ?>"></a>
 						<p class="photo-title text-center"><b><?= $photo['title']; ?></b> by <?= $photo['fullname']; ?></p>
 					</div>
