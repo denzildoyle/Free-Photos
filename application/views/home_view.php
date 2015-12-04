@@ -16,7 +16,8 @@
 						<div class="col-lg-6 col-md-6 col-xs-12 thumb">
 							<div class="newsletter-form">
 								<?= form_open_multipart('submit/do_upload');?>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quis molestias iure optio. Facere laudantium, consequatur minus nostrum voluptas tempora sapiente earum iure architecto dolore necessitatibus illum praesentium, quod et.</p>
+									<h1 class="text-center">Newsletter</h1>
+									<p  class="text-center">Free, hi-res food photos delivered directly to your inbox.</p>
 									<?php if(form_error('email') != '') echo "<div class=\"form-group error\">"; else echo "<div class=\"form-group\">"; ?>
 										<span class="help-inline"><?= form_error('email'); ?></span>
 										<input type="text" name="email" class="form-control" value="<?= set_value('email'); ?>" placeholder="email address">
@@ -28,7 +29,7 @@
 						</div>
 					<?php endif; ?>
 
-					<div class="col-lg-6 col-md-6 col-xs-12 thumb">
+					<div class="col-lg-6 col-md-6 col-xs-12 thumb <?php if($photo['id'] == 4) : ?> photo-4 <?php endif; ?>">
 						<a href="<?= base_url(). "download?img=" . $photo['id']; ?>"><img src="<?= base_url() . "public/img/preview/" . $photo['path']; ?>" alt="<?= $photo['description']; ?>"></a>
 						<p class="photo-title text-center"><b><?= $photo['title']; ?></b> by <?= $photo['fullname']; ?></p>
 					</div>
