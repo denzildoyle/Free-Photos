@@ -14,7 +14,7 @@
 			   	<?php foreach ($photos as $photo):?>
 					<?php if($photo['id'] == 3) : ?>
 						<div class="col-lg-6 col-md-6 col-xs-12 thumb">
-							<div class="newsletter-form">
+							<div class="_newsletter-form">
 								<?= form_open_multipart('submit/do_upload');?>
 									<h1 class="text-center">Newsletter</h1>
 									<p  class="text-center">Free, hi-res food photos delivered directly to your inbox.</p>
