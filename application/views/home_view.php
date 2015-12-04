@@ -12,11 +12,27 @@
 		<div class="container">
 			<div class="row">
 			   	<?php foreach ($photos as $photo):?>
+					<?php if($photo['id'] == 3) : ?>
+						<div class="col-lg-6 col-md-6 col-xs-12 thumb">
+							<div class="newsletter-form">
+								<?= form_open_multipart('submit/do_upload');?>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quis molestias iure optio. Facere laudantium, consequatur minus nostrum voluptas tempora sapiente earum iure architecto dolore necessitatibus illum praesentium, quod et.</p>
+									<?php if(form_error('email') != '') echo "<div class=\"form-group error\">"; else echo "<div class=\"form-group\">"; ?>
+										<span class="help-inline"><?= form_error('email'); ?></span>
+										<input type="text" name="email" class="form-control" value="<?= set_value('email'); ?>" placeholder="email address">
+									</div>
+
+									<center><input type="submit" value="Submit" class="form-control btn btn-primary" role="button"></center>
+								</form>
+							</div>
+						</div>
+					<?php endif; ?>
+
 					<div class="col-lg-6 col-md-6 col-xs-12 thumb">
-						<a href="<?= base_url(). "download?img=" . $photo['id']; ?>"><img src="<?= base_url() . "public/img/preview/" . $photo['path'] . ".jpg"; ?>" alt="<?= $photo['description']; ?>"></a>
+						<a href="<?= base_url(). "download?img=" . $photo['id']; ?>"><img src="<?= base_url() . "public/img/preview/" . $photo['path']; ?>" alt="<?= $photo['description']; ?>"></a>
 						<p class="photo-title text-center"><b><?= $photo['title']; ?></b> by <?= $photo['fullname']; ?></p>
 					</div>
-	          	<?php endforeach;?>
+          		<?php endforeach;?>
 			</div>
 		</div>
 <?= $this->load->view('layout/footer'); ?>

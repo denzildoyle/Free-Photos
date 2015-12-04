@@ -65,6 +65,7 @@ a.link{
 
 .photo-title{
   margin-top: 15px;
+  font-style: italic;
 }
 
 footer{
@@ -109,6 +110,15 @@ footer .download:hover{
 
 .share-icons li a:hover{
   color: #666;
+}
+
+.newsletter-form{
+  background-color: #EFEFEF;
+  width:100%;
+  height:100%;
+  padding: 50px 100px;
+  display: table;
+  border-radius: 2px;
 }
 
 /*override*/
