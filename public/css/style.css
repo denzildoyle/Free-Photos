@@ -112,13 +112,28 @@ footer .download:hover{
   color: #666;
 }
 
-._newsletter-form{
-  background-color: #EFEFEF;
-  width: 100%;
-  border-radius: 2px;
-  padding: 50px;
-  padding-bottom: 200px;
+.newsletter {
+    background: #EFEFEF;
+    max-width: 100%;
 }
+
+.newsletter img {
+    opacity: 0;
+}
+
+.subscribe {
+    position: absolute;
+    width: calc(100% - 30px);
+    padding: 0 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.subscribe button {
+    background: #212121;
+    color: #fff;
+}
+
 
 /*override*/
 .btn-primary{

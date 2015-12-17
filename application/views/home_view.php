@@ -14,17 +14,21 @@
 			   	<?php foreach ($photos as $photo):?>
 					<?php if($photo['id'] == 3) : ?>
 						<div class="col-lg-6 col-md-6 col-xs-12 thumb">
-							<div class="_newsletter-form" id="newsletter-form">
-								<?= form_open_multipart('submit/do_upload');?>
-									<h1 class="text-center">Newsletter</h1>
-									<p  class="text-center">Free, hi-res food photos delivered directly to your inbox.</p>
-									<?php if(form_error('email') != '') echo "<div class=\"form-group error\">"; else echo "<div class=\"form-group\">"; ?>
-										<span class="help-inline"><?= form_error('email'); ?></span>
-										<input type="text" name="email" class="form-control" value="<?= set_value('email'); ?>" placeholder="email address">
-									</div>
+							<div class="newsletter">
+							    <img src="http://freshlysqzd.com/freefood/public/img/preview/FreeFood_half-cantaloupe.jpg" alt="Juicy cantaloupe cut in half">
 
-									<center><input type="submit" value="Submit" class="form-control btn btn-primary" role="button"></center>
-								</form>
+							    <div class="subscribe">
+									<h3 class="text-center">Newsletter</h3>
+									<p class="text-center">Free, hi-res food photos delivered to your inbox.</p>
+
+									<form>
+										<?php if(form_error('email') != '') echo "<div class=\"form-group error\">"; else echo "<div class=\"form-group\">"; ?>
+											<span class="help-inline"><?= form_error('email'); ?></span>
+											<input type="text" name="email" class="form-control" value="<?= set_value('email'); ?>" placeholder="email address">
+										</div>
+										<center><input type="submit" value="Submit" class="form-control btn btn-primary" role="button"></center>
+									</form>
+						    	</div>
 							</div>
 						</div>
 					<?php endif; ?>
