@@ -1,7 +1,7 @@
 <?= $this->load->view('layout/header'); ?>
 	<body class="bg"
 		style="
-			background: url('<?= base_url() . "public/img/" . $photo->path . ".jpg"; ?>') no-repeat center center fixed;
+			background: url('<?= base_url() . "public/img/" . $photo->path; ?>') no-repeat center center fixed;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
@@ -10,7 +10,7 @@
 
 		<div class="overlay">
 			<footer>
-				<a class="download" href="<?= base_url() . "public/img/" . $photo->path . ".jpg"; ?>" download>Download</a>
+				<a class="download" href="<?= base_url() . "public/img/" . $photo->path; ?>" download>Download</a>
 				<ul class="share-icons">
 		 		<li><a class="icon-link"></a></li>
 		 		<li><a class="icon-twitter"></a></li>
