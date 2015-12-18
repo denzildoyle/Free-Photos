@@ -15,17 +15,17 @@
 					<?php if($photo['id'] == 3) : ?>
 						<div class="col-lg-6 col-md-6 col-xs-12 thumb">
 							<div class="newsletter">
-							    <img src="http://freshlysqzd.com/freefood/public/img/preview/FreeFood_half-cantaloupe.jpg" alt="Juicy cantaloupe cut in half">
+							    <img src="http://freshlysqzd.com/freefood/public/img/preview/FreeFoodPhotography_half-cantaloupe.jpg" alt="Juicy cantaloupe cut in half">
 
 							    <div class="subscribe">
 									<h3 class="text-center">Newsletter</h3>
 									<p class="text-center">Free, hi-res food photos delivered to your inbox.</p>
-
-									<form>
+									<form action="//denzildoyle.us10.list-manage.com/subscribe/post?u=e0400665d26ade2c30eb26cf7&amp;id=33b52d6fdc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 										<?php if(form_error('email') != '') echo "<div class=\"form-group error\">"; else echo "<div class=\"form-group\">"; ?>
 											<span class="help-inline"><?= form_error('email'); ?></span>
-											<input type="text" name="email" class="form-control" value="<?= set_value('email'); ?>" placeholder="email address">
+											<input type="text" name="EMAIL" class="form-control" value="<?= set_value('email'); ?>" placeholder="email address">
 										</div>
+										<input type="text" name="b_e0400665d26ade2c30eb26cf7_33b52d6fdc" tabindex="-1" value="" hidden>
 										<center><input type="submit" value="Submit" class="form-control btn btn-primary" role="button"></center>
 									</form>
 						    	</div>
