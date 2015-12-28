@@ -31,7 +31,7 @@
 		<meta name="twitter:url" property="og:url" content="http://freshlysqzd.com/freefood/">
 		<meta name="twitter:title" property="og:title" content="Free Food Photography">
 		<meta name="twitter:description" property="og:description" content="Free do whatever you want high-resolution food photos.">
-		<meta name="twitter:image" property="og:image" content="<?= base_url() . "public/img/" ?>social-img.jpg">
+		<meta name="twitter:image" property="og:image" content="<?= base_url() . "public/img/" ?>social-img.png">
 
 		<?php include_once("analyticstracking.php") ?>
 	</head>
