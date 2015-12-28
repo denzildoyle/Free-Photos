@@ -3,10 +3,10 @@
 		<div class="container header">
 			<div class="col-md-6 col-md-offset-3">
 				<a class="logo" href="<?= base_url(). ""; ?>"><h2 class="text-center">Free Food Photography</h2></a>
-				<h6 class="text-center">MADE BY <a href="http://www.freshlysqzd.com">FRESHLY SQUEEZED DESIGNS</a></h6>
+				<h6 class="text-center">MADE BY <a href="http://www.freshlysqzd.com" onClick="ga('send', 'event', 'link', 'click', 'freshlysqzd.com');" >FRESHLY SQUEEZED DESIGNS</a></h6>
 
-				<p class="text-center"><b>Free (<a href="<?= base_url() . "license" ?>" class="link"> do whatever you want </a>) high-resolution food photos.</b> I take a lot of food photos and never really do anything with them, so here you go.</p>
-				<center><a href="<?= base_url(). "submit"; ?>" class="btn btn-primary" role="button">Upload Photo <i class="icon icon-upload-cloud-1"></i></a></center>
+				<p class="text-center"><b>Free (<a href="<?= base_url() . "license" ?>" onClick="ga('send', 'event', 'link', 'click', 'license');" class="link"> do whatever you want </a>) high-resolution food photos.</b> We take a lot of food photos and never really do anything with them, so here you go.</p>
+				<center><a href="<?= base_url(). "submit"; ?>" onClick="ga('send', 'event', 'button', 'click', 'submit');" class="btn btn-primary" role="button">Upload Photo <i class="icon icon-upload-cloud-1"></i></a></center>
 			</div>
 		</div>
 		<div class="container">
@@ -35,10 +35,10 @@
 
 					<div class="col-lg-6 col-md-6 col-xs-12 thumb" <?php if($photo['id'] == 4) : ?> id="photo-4" <?php endif; ?> >
 						<?php if(!$photo['ad']) : ?>
-							<a href="<?= base_url(). "download?img=" . $photo['id']; ?>"><img src="<?= base_url() . "public/img/preview/" . $photo['path']; ?>" alt="<?= $photo['description']; ?>"></a>
+							<a href="<?= base_url(). "download?img=" . $photo['id']; ?>" onClick="ga('send', 'event', 'image', 'click', '<?= "image-ID-" . $photo['id']; ?>');"><img src="<?= base_url() . "public/img/preview/" . $photo['path']; ?>" alt="<?= $photo['description']; ?>"></a>
 							<p class="photo-title text-center"><b><?= $photo['title']; ?></b> by <?= $photo['fullname']; ?></p>
 						<?php else: ?>
-							<a href="<?= $photo['url']; ?>"><img src="<?= base_url() . "public/img/preview/" . $photo['path']; ?>" alt="<?= $photo['description']; ?>"></a>
+							<a href="<?= $photo['url']; ?>" onClick="ga('send', 'event', 'image-ad', 'click', '<?= $photo['url']; ?>');"><img src="<?= base_url() . "public/img/preview/" . $photo['path']; ?>" alt="<?= $photo['description']; ?>"></a>
 							<p class="photo-title text-center"><?= $photo['description']; ?></p>
 						<?php endif; ?>
 					</div>
