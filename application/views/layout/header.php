@@ -6,11 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<title>Free Food Photography</title>
 
-	    <link rel="image_src" href="http://www.freshlysqzd.com/freefood/img/fb_thumb_main.png" />
-	    <meta property="og:title" content="Free Food" />
-	    <meta property="og:type" content="website" />
-	    <meta property="og:image" content=".<?= base_url() . "public/" ?>img/fb_thumb_main.png" />
-	    <meta property="og:description" content="" />
+		<meta name="description" content="Free do whatever you want high-resolution food photos.">
+		<meta name="keywords" content="Free, Photography, Food, Photo, High-resolution">
+		<meta name="author" content="Freshly Squeezed Design">
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
