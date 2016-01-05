@@ -8,10 +8,6 @@ function facebook(){
 	ga('send', 'event', 'social-icon', 'click', 'facebook');
 }
 
-// $("img.lazy").lazyload({
-//     effect : "fadeIn"
-// });
-
 $(function() {
 	$("img.lazy").lazyload({
 	    effect : "fadeIn"
