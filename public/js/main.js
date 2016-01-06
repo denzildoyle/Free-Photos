@@ -8,6 +8,7 @@ function facebook(){
 	ga('send', 'event', 'social-icon', 'click', 'facebook');
 }
 
+//Fade in new images when scrolling
 $(function() {
 	$("img.lazy").lazyload({
 	    effect : "fadeIn"
