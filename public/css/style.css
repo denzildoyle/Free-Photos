@@ -9,6 +9,10 @@
   font-style: normal;
 }
 
+.uppercase{
+  text-transform: uppercase;
+}
+
 img{
   width: 100%;
   display: block;
