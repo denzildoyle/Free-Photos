@@ -19,7 +19,7 @@ require APPPATH . '/libraries/REST_Controller.php';
 class V1 extends REST_Controller {
 
     function __construct(){
-        // Construct the parent class
+        header('Access-Control-Allow-Origin: *');
         parent::__construct();
     }
 
