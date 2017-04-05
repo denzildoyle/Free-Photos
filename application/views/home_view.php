@@ -1,10 +1,9 @@
-<?= $this->load->view('layout/header'); ?>
+<?php $this->load->view('layout/header'); ?>
 	<body>
 		<div class="container header">
 			<div class="col-md-6 col-md-offset-3">
 				<a class="logo" href="<?= base_url(). ""; ?>"><h2 class="text-center">Free Food Photography</h2></a>
 				<h6 class="text-center">MADE BY <a href="http://www.freshlysqzd.com" onClick="ga('send', 'event', 'link', 'click', 'freshlysqzd.com');" >FRESHLY SQUEEZED DESIGNS</a></h6>
-
 				<p class="text-center"><b>Free (<a href="<?= base_url() . "license" ?>" onClick="ga('send', 'event', 'link', 'click', 'license');" class="link"> do whatever you want </a>) high-resolution food photos.</b> We take a lot of food photos and never really do anything with them, so here you go.<br><br> For more information contact us at <a class="uppercase" href="mailto:fresh@freshlysqzd.com">fresh@freshlysqzd.com</a></p>
 				<center><a href="<?= base_url(). "submit"; ?>" onClick="ga('send', 'event', 'button', 'click', 'submit');" class="btn btn-primary" role="button">Upload Photo <i class="icon icon-upload-cloud-1"></i></a></center>
 			</div>
@@ -45,4 +44,4 @@
           		<?php endforeach;?>
 			</div>
 		</div>
-<?= $this->load->view('layout/footer'); ?>
+<?php $this->load->view('layout/footer'); ?>
