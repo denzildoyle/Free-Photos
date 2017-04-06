@@ -163,6 +163,16 @@ footer .download:hover{
   padding: 6px 12px;
 }
 
+.subscribe-tag{
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 10px 30px;
+  background: #000;
+  color: #fff;
+}
+
 /*mobile*/
 @media (max-width: 600px) {
   .newsletter-form{
