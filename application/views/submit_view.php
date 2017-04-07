@@ -1,4 +1,4 @@
-<?= $this->load->view('layout/header'); ?>
+<?php $this->load->view('layout/header'); ?>
 	<body>
 		<div class="container header">
 			<div class="col-md-6 col-md-offset-3">
@@ -46,4 +46,4 @@
 				</form>
 			</div>
 		</div>
-<?= $this->load->view('layout/footer'); ?>
+<?php $this->load->view('layout/footer'); ?>
