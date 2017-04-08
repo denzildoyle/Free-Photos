@@ -16,7 +16,7 @@ class Submit extends CI_Controller {
 			$config['upload_path'] = './uploads/images';
 			$config['allowed_types'] = 'jpg|png';
 			//prepend title of photo to file title
-			$config['file_name'] = 'FreeFoodPhotography_'.str_replace(' ','_',$this->input->post('title'));
+			$config['file_name'] = 'FreshPhotos_'.str_replace(' ','_',$this->input->post('title'));
 			$config['overwrite'] = false;
 			$this->load->library('upload', $config);
 			$this->upload->initialize($config);

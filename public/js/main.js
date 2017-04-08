@@ -1,5 +1,5 @@
 function twitter(){
-   window.open( "http://twitter.com/share?text=" + "Download amazing free food photography." + "&url=http://www.freshlysqzd.com/photos?p=twitter&related=freshlysqzd,denzildoyle&via=freshlysqzd&hashtags=freefoodphotography", 'twitter-share');
+   window.open( "http://twitter.com/share?text=" + "Download amazing free food photography." + "&url=http://www.freshlysqzd.com/photos?p=twitter&related=freshlysqzd,denzildoyle&via=freshlysqzd&hashtags=FreshPhotos", 'twitter-share');
    ga('send', 'event', 'social-icon', 'click', 'twitter');
 }
 
