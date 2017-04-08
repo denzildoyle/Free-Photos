@@ -7,6 +7,7 @@ class Application_model extends CI_Model{
 
 	public function getPhotos(){
         $this->db->where(array('approved' => '1'));
+        $this->db->order_by('created', 'DESC');
 	    $query = $this->db->get('photos');
 	    return $query->result_array();
 	}
