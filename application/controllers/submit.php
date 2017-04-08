@@ -23,7 +23,7 @@ class Submit extends CI_Controller {
 			$config['allowed_types'] = 'jpg|png';
 
 			//prepend title of photo to file title
-			$config['file_name'] = 'FreeFoodPhotography_'.str_replace(' ','_',$this->input->post('title'));;
+			$config['file_name'] = 'FreeFoodPhotography_'.str_replace(' ','_',$this->input->post('title'));
 			$config['overwrite'] = false;
 
 			$this->load->library('upload', $config);
@@ -33,18 +33,34 @@ class Submit extends CI_Controller {
 				//add uploaded files to array
 				$image = $this->upload->data();
 
-				//add data to array
-				$photo = array(
-				  'fullname' => $this->input->post('fullname'),
-				  'title' => $this->input->post('title'),
-				  'path' => $image['file_name'],
-				  'description' => $this->input->post('description')
-				);
+				$resizeConfig['image_library'] = 'gd2';
+				$resizeConfig['source_image'] = $image['full_path'];
+				$resizeConfig['new_image'] = './uploads/preview';
+				$resizeConfig['maintain_ratio'] = TRUE;
+				$resizeConfig['quality'] = "100%";
+				$resizeConfig['width'] = 600;
+				$resizeConfig['height'] = 600;
 
-				$this->application_model->addPhoto($photo);
-				$this->session->set_flashdata('success-message', 'Photo added and waiting for approval.');
+				$this->image_lib->clear();
+				$this->image_lib->initialize($resizeConfig);
 
-				redirect('submit');
+				if ( ! $this->image_lib->resize()){
+				    echo $this->image_lib->display_errors();
+				} else{
+					//add data to array
+					$photo = array(
+					  'fullname' => $this->input->post('fullname'),
+					  'title' => $this->input->post('title'),
+					  'path' => $image['file_name'],
+					  'description' => $this->input->post('description')
+					);
+
+					$this->application_model->addPhoto($photo);
+					$this->session->set_flashdata('success-message', 'Photo added and waiting for approval.');
+
+					redirect('submit');
+				}
+
 			} else{
 				$this->session->set_flashdata('error-message', $this->upload->display_errors());
 				$this->index();
