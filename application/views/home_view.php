@@ -11,7 +11,7 @@
 		<div class="container">
 			<div class="row">
 			   	<?php foreach ($photos as $photo):?>
-					<div class="col-lg-6 col-md-6 col-xs-12 thumb" <?php if($photo['id'] == 4) : ?> id="photo-4" <?php endif; ?> >
+					<div class="thumb" <?php if($photo['id'] == 4) : ?> id="<?= $photo['id']; ?>" <?php endif; ?> >
 						<?php if(!$photo['ad']) : ?>
 							<a href="<?= base_url(). "download?img=" . $photo['id']; ?>" onClick="ga('send', 'event', 'image', 'click', '<?= "image-ID-" . $photo['id']; ?>');"><img class="lazy" data-original="<?= base_url() . "uploads/preview/" . $photo['path']; ?>" alt="<?= $photo['description']; ?>"></a>
 							<p class="photo-title text-center"><b><?= $photo['title']; ?></b> by <?= $photo['fullname']; ?></p>

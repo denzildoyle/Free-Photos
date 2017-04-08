@@ -3,5 +3,7 @@
 		<script src="<?= base_url(). "public/js/"; ?>main.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="<?= base_url(). "public/js/"; ?>jquery.lazyload.js"></script>
+		<script src="<?= base_url(). "public/js/"; ?>masonry.min.js"></script>
+		<script src="<?= base_url(). "public/js/"; ?>imagesloaded.min.js"></script>
 	</body>
 </html>

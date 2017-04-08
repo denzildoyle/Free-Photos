@@ -8,9 +8,18 @@ function facebook(){
 	ga('send', 'event', 'social-icon', 'click', 'facebook');
 }
 
-//Fade in new images when scrolling
 $(function() {
-	$("img.lazy").lazyload({
-	    effect : "fadeIn"
+	$('.row').imagesLoaded(function() {
+		$('.row').masonry({
+			itemSelector: '.thumb',
+			columnWidth: '.thumb',
+			percentPosition: true
+		});
 	});
+
+	// fade in new images when scrolling
+    $('img.lazy').lazyload({
+        effect: 'fadeIn'
+    });
+    $('img.lazy').trigger('scroll');
 });
