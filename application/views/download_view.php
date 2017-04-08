@@ -1,23 +1,12 @@
 <?php $this->load->view('layout/header'); ?>
-	<body class="bg"
-		style="
-			background: url('<?= base_url() . "uploads/images/" . $photo->path; ?>') no-repeat center center fixed;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
-		">
-
-		<div class="overlay">
-			<footer>
-				<a class="download" onClick="ga('send', 'event', 'button', 'click', 'download');" href="<?= base_url() . "uploads/images/" . $photo->path; ?>" download>Download</a>
-				<ul class="share-icons">
+	<body>
+		<img class="main-img" src="<?= base_url() . "uploads/images/" . $photo->path; ?>">
+		<footer>
+			<a class="download" onClick="ga('send', 'event', 'button', 'click', 'download');" href="<?= base_url() . "uploads/images/" . $photo->path; ?>" download>Download</a>
+			<ul class="share-icons">
 		 		<li><a class="icon-link" onClick="ga('send', 'event', 'social-icon', 'click', 'web-link');"></a></li>
 		 		<li><a class="icon-twitter" onClick="twitter()" ></a></li>
 		 		<li><a class="icon-facebook-1" onClick="facebook()"></a></li>
 		 	</ul>
-			<!-- <i class="demo-icon icon-spin5 animate-spin"></i> -->
-		 	<!-- <li><a class="demo-icon icon-upload-cloud-1"></a></li> -->
-			</footer>
-		</div>
+		</footer>
 <?php $this->load->view('layout/footer'); ?>
