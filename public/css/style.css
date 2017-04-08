@@ -19,6 +19,13 @@ html,body{
   text-transform: uppercase;
 }
 
+.thumb{
+  width: 50%;
+  padding: 10px;
+  float: left;
+  height: auto;
+}
+
 img{
   width: 100%;
   height: auto;
@@ -53,13 +60,6 @@ img:hover{
 a.link{
   color: #888;
   font-weight: 400;
-}
-
-.thumb{
-  width: 50%;
-  padding: 10px;
-  float: left;
-  height: auto;
 }
 
 .bg{

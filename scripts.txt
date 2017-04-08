@@ -1,0 +1,11 @@
+APPROVE ALL PHOTO UPLOADS
+
+UPDATE `photos`
+SET `approved` = 1
+WHERE `approved` = 0;
+
+REJECT ALL PHOTO UPLOADS
+
+UPDATE `photos`
+SET `approved` = 0
+WHERE `approved` = 1;
