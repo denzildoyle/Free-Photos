@@ -1,2 +1,3 @@
 # FreePhotos  
-Add analyticstracking.php file in application/view/layout/  
+#### Setup Project
+- Add analyticstracking.php file in application/view/layout/  
