@@ -107,13 +107,13 @@ footer .download:hover{
   float: right;
   padding: 5px;
   font-size: 20px;
-  margin:0;
+  margin: 0;
 }
 
 .share-icons li{
   list-style: none;
   float: left;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .share-icons li a{
@@ -128,8 +128,8 @@ footer .download:hover{
 }
 
 .newsletter {
-    background: #EFEFEF;
-    max-width: 100%;
+  background: #EFEFEF;
+  max-width: 100%;
 }
 
 .newsletter img {

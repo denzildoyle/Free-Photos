@@ -15,14 +15,7 @@
 		<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/style.css">
 
 		<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/animation.css">
-		<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/fontello-codes.css">
-		<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/fontello-embedded.css">
-		<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/fontello.css">
-
-		<!--[if lte IE 7]>
-			<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/fontello-ie7-codes.css">
-			<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/fontello-ie7.css">
-		<![endif]-->
+		<link rel="stylesheet" href="<?= base_url() . "public/" ?>css/font-awesome.min.css">
 
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:site" content="@freshlysqzd">
