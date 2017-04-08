@@ -19,7 +19,7 @@ class Submit extends CI_Controller {
 		$this->form_validation->set_message('min_length', '%s must have at least %s characters');
 
       	if ($this->form_validation->run()){
-			$config['upload_path'] = './public/img';
+			$config['upload_path'] = './uploads/images';
 			$config['allowed_types'] = 'jpg|png';
 
 			//prepend title of photo to file title

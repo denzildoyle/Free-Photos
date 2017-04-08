@@ -1,7 +1,7 @@
-<?= $this->load->view('layout/header'); ?>
+<?php $this->load->view('layout/header'); ?>
 	<body class="bg"
 		style="
-			background: url('<?= base_url() . "public/img/" . $photo->path; ?>') no-repeat center center fixed;
+			background: url('<?= base_url() . "uploads/images/" . $photo->path; ?>') no-repeat center center fixed;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
@@ -10,7 +10,7 @@
 
 		<div class="overlay">
 			<footer>
-				<a class="download" onClick="ga('send', 'event', 'button', 'click', 'download');" href="<?= base_url() . "public/img/" . $photo->path; ?>" download>Download</a>
+				<a class="download" onClick="ga('send', 'event', 'button', 'click', 'download');" href="<?= base_url() . "uploads/images/" . $photo->path; ?>" download>Download</a>
 				<ul class="share-icons">
 		 		<li><a class="icon-link" onClick="ga('send', 'event', 'social-icon', 'click', 'web-link');"></a></li>
 		 		<li><a class="icon-twitter" onClick="twitter()" ></a></li>
@@ -20,4 +20,4 @@
 		 	<!-- <li><a class="demo-icon icon-upload-cloud-1"></a></li> -->
 			</footer>
 		</div>
-<?= $this->load->view('layout/footer'); ?>
+<?php $this->load->view('layout/footer'); ?>
